@@ -91,15 +91,6 @@ taskflow/
 
 **Đây là mô tả phương án CI/CD, không khẳng định dự án đã triển khai pipeline thực tế.**
 
-## 9. Bằng chứng nên chụp màn hình
-1. Mở Dockerfile trong VS Code thấy `FROM`, 4 `RUN`, `USER`, `ENTRYPOINT`, `CMD`.
-2. Mở `docker-compose.yml` và `docker-entrypoint.sh`.
-3. Terminal chạy `docker compose up --build -d` thành công.
-4. Terminal `docker compose ps` báo running/healthy.
-5. Website http://localhost:5000: thêm nhiệm vụ, sửa, đánh dấu hoàn thành, tìm kiếm/lọc và các thống kê.
-6. Terminal `docker compose exec taskflow id` hiển thị UID không phải 0 (root).
-7. Terminal `curl.exe http://localhost:5000/health` hiển thị `database: connected`.
-
 
 ## CI/CD THỰC TẾ VỚI GITHUB ACTIONS
 
