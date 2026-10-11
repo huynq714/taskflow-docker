@@ -1,4 +1,4 @@
-name: CD - Publish TaskFlow image
+﻿name: CD - Publish TaskFlow image
 
 on:
   push:
@@ -35,7 +35,7 @@ jobs:
           push: false
           tags: taskflow:candidate
       - name: Scan candidate for vulnerabilities
-        uses: aquasecurity/trivy-action@0.33.1
+        uses: aquasecurity/trivy-action@v0.36.0
         with:
           image-ref: taskflow:candidate
           format: table
@@ -62,3 +62,4 @@ jobs:
           tags: |
             ${{ steps.image.outputs.name }}:latest
             ${{ steps.image.outputs.name }}:${{ github.sha }}
+
